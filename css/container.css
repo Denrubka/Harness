@@ -5,14 +5,14 @@
   margin-right: auto;
   margin-left: auto;
 }
+/* @media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+} */
 @media (min-width: 640px) {
   .container {
-    max-width: 580px;
-  }
-}
-@media (min-width: 960px) {
-  .container {
-    max-width: 900px;
+    max-width: 540px;
   }
 }
 @media (min-width: 1020px) {

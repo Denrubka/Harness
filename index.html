@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <title>Портупеи</title>
 </head>
-<body>
+<body class="body">
   <div class="wrapper">
     <header class="header">
       <div class="container">
@@ -61,10 +61,10 @@
       <div class="description-images">
         <img src="./images/desc1.jpg" width="160" height="320" alt="Портупеи">
         <img src="./images/desc2.jpg" width="320" height="320" alt="Портупеи">
-        <img src="./images/desc3.jpg" width="320" height="320" alt="Портупеи">
-        <img src="./images/desc4.jpg" width="320" height="320" alt="Портупеи">
-        <img src="./images/desc5.jpg" width="320" height="320" alt="Портупеи">
-        <img src="./images/desc6.jpg" width="320" height="320" alt="Портупеи">
+        <img class="d-none640" src="./images/desc3.jpg" width="320" height="320" alt="Портупеи">
+        <img class="d-none960" src="./images/desc4.jpg" width="320" height="320" alt="Портупеи">
+        <img class="d-none960" src="./images/desc5.jpg" width="320" height="320" alt="Портупеи">
+        <img class="d-none960" src="./images/desc6.jpg" width="320" height="320" alt="Портупеи">
         <img src="./images/desc7.jpg" width="160" height="320" alt="Портупеи">
       </div>
     </section>
@@ -320,6 +320,41 @@
         </div>
       </div>
     </section>
+    <div class="modal-wrapper">
+      <div class="modal">
+        <img class="modal__img" src="./images/card3.jpg" alt="Портупея"></img>
+        <div class="modal-content">
+          <span class="modal__title">Портупея "Джони Миллер"</span>
+          <div class="modal-price">
+            <span class="modal-price__old">4990 р.</span>
+            <span class="modal-price__new">2990 р.</span>
+          </div>
+          <form class="modal-form">
+            <div class="modal-form__select">
+              <button class="select__btn">XS
+                <img class="select__icon" width="14" heigh="8" src="./images/arrow.png" alt="Arrow">
+              </button>
+              <ul class="select__list">
+                <li class="select__item">x</li>
+                <li class="select__item">xs</li>
+                <li class="select__item">xl</li>
+                <li class="select__item">xxl</li>
+              </ul>
+            </div>
+            <label class="modal-form__label">
+              <input class="modal-form__input" type="text">
+              <span class="modal-form__span">Введите Ваше имя</span>
+            </label>
+            <label class="modal-form__label">
+              <input class="modal-form__input" type="text">
+              <span class="modal-form__span">Введите Ваш телефон</span>
+            </label>
+            <button class="btn modal-form__btn">Оформить заказ</button>
+          </form>
+          <img class="modal__close" src="./images/close.png" alt="Close">
+        </div>
+      </div>
+    </div>
   </div>
   <script src="./js/script.js"></script>
 </body>
