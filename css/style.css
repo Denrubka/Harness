@@ -84,6 +84,7 @@ body {
 }
 .intro__btns {
   display: flex;
+  justify-content: center;
   width: 100%;
 }
 .intro__btn {
@@ -97,6 +98,7 @@ body {
   text-decoration: none;
   border: 2px solid #fff;
   padding: 17px 0 15px 0;
+  max-width: 260px;
   width: 100%;
 }
 .intro__btn:not(:last-child) {
