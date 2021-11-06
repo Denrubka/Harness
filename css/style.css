@@ -10,7 +10,6 @@ body {
   line-height: 20px;
   font-weight: 400;
   color: #1e1e1e;
-  overflow-x: hidden;
 }
 .btn {
   font-size: 18px;
@@ -562,5 +561,11 @@ body {
   }
   .table__cat {
     font-size: 7px;
+  }
+  .description-images {
+    display: none;
+  }
+  .modal {
+    flex-direction: column;
   }
 }
