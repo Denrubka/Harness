@@ -42,6 +42,25 @@ const catalogTabs = () => {
     });
   });
 }
+const cardTabs = () => {
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    const btns = card.querySelectorAll('.card-sizes__btn');
+    btns.forEach(btn => {
+      btn.addEventListener('click', event => {
+        const target = event.target;
+        if(!target.matches('active')) {
+          btns.forEach(btn => {
+            btn.classList.remove('active');
+          })
+          btn.classList.add('active');
+        }
+      });
+    });
+  });
+}
+cardTabs();
 catalogTabs();
 modal();
 
