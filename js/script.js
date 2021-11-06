@@ -7,11 +7,11 @@ const modal = () => {
 
   const modalOpen = () => {
     modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden';
   }
   const modalClose = () => {
     modal.classList.remove('active');
-    document.body.style.overflow = '';
+    // document.body.style.overflow = '';
   }
 
   cardBtns.forEach(btn => {
