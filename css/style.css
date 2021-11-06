@@ -260,6 +260,7 @@ body {
   font-size: 24px;
   color: #8c8c8c;
   margin-right: 22px;
+  text-decoration: line-through;
 }
 .card-price__new {
   font-size: 30px;

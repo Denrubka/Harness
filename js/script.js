@@ -3,10 +3,21 @@ const btns = document.querySelectorAll('button');
 const modal = () => {
   const cardBtns = document.querySelectorAll('.card__btn');
   const modal = document.querySelector('.modal-wrapper');
+  const modalTitle = modal.querySelector('.modal__title');
+  const modalSize = modal.querySelector('.select__btn');
+  const modalOldPrice = modal.querySelector('.modal-price__old');
+  const modalNewPrice = modal.querySelector('.modal-price__new');
+  const modalImg = modal.querySelector('.modal__img');
 
 
-  const modalOpen = () => {
+
+  const modalOpen = (title, size, oldPrice, newPrice, img) => {
     modal.classList.add('active');
+    modalTitle.textContent = title.textContent;
+    modalSize.innerHTML = `${size.textContent} <img class="select__icon" width="14" heigh="8" src="./images/arrow.png" alt="Arrow">`;
+    modalOldPrice.textContent = oldPrice.textContent;
+    modalNewPrice.textContent = newPrice.textContent;
+    modalImg.src = img.src;
     // document.body.style.overflow = 'hidden';
   }
   const modalClose = () => {
@@ -15,10 +26,17 @@ const modal = () => {
   }
 
   cardBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (event) => {
+      const target = event.target;
+      const parent = target.closest('.card');
+      const title = parent.querySelector('.card__title');
+      const size = parent.querySelector('.card-sizes__btn.active');
+      const oldPrice = parent.querySelector('.card-price__old');
+      const newPrice = parent.querySelector('.card-price__new');
+      const img = parent.querySelector('.card-head__img');
       btn.classList.contains('active') ?
         modalClose() :
-          modalOpen();
+          modalOpen(title, size, oldPrice, newPrice, img);
     })
   })
   modal.addEventListener('click', event => {
